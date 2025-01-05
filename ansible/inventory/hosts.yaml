@@ -1,0 +1,8 @@
+---
+kubernetes:
+  children:
+    controllers:
+      hosts:
+        "oxide":
+          ansible_user: "jsenecal"
+          ansible_host: "192.168.168.5"
