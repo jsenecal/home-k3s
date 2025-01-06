@@ -22,4 +22,6 @@ k3s_server:
   tls-san:
     - "192.168.168.68"
     - "k3s.int.mstrsmth.io"
+    - "k3s.mstrsmth.io"
+    - "oxide.mstrsmth.io"
   write-kubeconfig-mode: "644"

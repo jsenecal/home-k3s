@@ -32,7 +32,7 @@ spec:
       hostRoot: /sys/fs/cgroup
     cluster:
       id: 1
-      name: mstrsmth.io
+      name: home-k3s
     cni:
       exclusive: false
       binPath: /var/lib/rancher/k3s/data/current/bin
