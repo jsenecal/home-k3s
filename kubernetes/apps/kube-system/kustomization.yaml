@@ -5,5 +5,7 @@ resources:
   - ./namespace.yaml
   - ./cilium/ks.yaml
   - ./metrics-server/ks.yaml
+  - ./nvidia-device-plugin/ks.yaml
+  - ./nvidia-gpu-operator/ks.yaml
   - ./reloader/ks.yaml
   - ./kube-vip/ks.yaml
