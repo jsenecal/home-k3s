@@ -12,3 +12,5 @@ resources:
   - ./metrics-server.yaml
   - ./openebs.yaml
   - ./stakater.yaml
+  - ./nvidia-operator.yaml
+  - ./nvidia.yaml
