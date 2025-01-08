@@ -22,4 +22,3 @@ resources:
   - ./nvidia-operator.yaml
   - ./nvidia.yaml
   - ./prometheus-community.yaml
-  - ./stakater.yaml
