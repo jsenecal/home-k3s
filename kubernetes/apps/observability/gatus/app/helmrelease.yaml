@@ -115,7 +115,7 @@ spec:
         annotations:
           external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
         hosts:
-          - host: "{{ .Release.Name }}.${SECRET_DOMAIN}"
+          - host: "status.${SECRET_DOMAIN}" # is usually {{ .Release.Name }}.${SECRET_DOMAIN} but we want "status" for this app
             paths:
               - path: /
                 service:
