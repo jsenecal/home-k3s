@@ -12,7 +12,7 @@ spec:
       app.kubernetes.io/name: *appname
   interval: 30m
   timeout: 5m
-  path: ./kubernetes/apps/database/crunchy-postgres-operator/operator
+  path: ./kubernetes/apps/database-services/crunchy-postgres-operator/operator
   prune: true
   sourceRef:
     kind: GitRepository
@@ -32,7 +32,7 @@ spec:
       app.kubernetes.io/name: *appname
   interval: 30m
   timeout: 5m
-  path: ./kubernetes/apps/database/crunchy-postgres-operator/cluster
+  path: ./kubernetes/apps/database-services/crunchy-postgres-operator/cluster
   prune: true
   sourceRef:
     kind: GitRepository
@@ -54,7 +54,7 @@ spec:
       app.kubernetes.io/name: *appname
   interval: 30m
   timeout: 5m
-  path: ./kubernetes/apps/database/crunchy-postgres-operator/clustersecretstore
+  path: ./kubernetes/apps/database-services/crunchy-postgres-operator/clustersecretstore
   prune: true
   sourceRef:
     kind: GitRepository
@@ -77,7 +77,7 @@ spec:
       app.kubernetes.io/name: *appname
   interval: 30m
   timeout: 5m
-  path: ./kubernetes/apps/database/crunchy-postgres-operator/userinit-controller
+  path: ./kubernetes/apps/database-services/crunchy-postgres-operator/userinit-controller
   prune: true
   sourceRef:
     kind: GitRepository
