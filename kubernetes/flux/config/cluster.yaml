@@ -43,7 +43,7 @@ spec:
   interval: 30m
   dependsOn:
     - name: cluster-shared
-  path: ./kubernetes/main/flux
+  path: ./kubernetes/flux
   prune: true
   wait: false
   sourceRef:
