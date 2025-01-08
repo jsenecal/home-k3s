@@ -12,14 +12,3 @@ spec:
     staticConfig:
       static:
         - 192.168.254.4
-        - garage-door.internal
-        - hdhomerun.internal
-        - idrac.internal
-        - kiosk.internal
-        - kvm.internal
-        - pikvm.internal
-        - receiver.internal
-        - ups.internal
-        - vacuum.internal
-        - zigbee-controller.internal
-        - zwave-controller.internal
