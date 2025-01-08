@@ -27,8 +27,8 @@ spec:
   dependsOn:
     - name: kube-prometheus-stack-crds
       namespace: observability
-    - name: rook-ceph-cluster
-      namespace: rook-ceph
+    - name: openebs
+      namespace: openebs-system
   values:
     crds:
       enabled: false
