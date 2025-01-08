@@ -1,24 +1,34 @@
 ---
+# yaml-language-server: $schema=https://json.schemastore.org/kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: flux-system
 resources:
   - ./backube.yaml
   - ./bitnami.yaml
   - ./bjw-s.yaml
   - ./cilium.yaml
+  - ./cloudnative-pg.yaml
   - ./coredns.yaml
+  # - ./crossplane.yaml
   - ./csi-driver-nfs.yaml
+  - ./descheduler.yaml
   - ./emqx.yaml
   - ./external-dns.yaml
   - ./external-secrets.yaml
   - ./grafana.yaml
   - ./ingress-nginx.yaml
-  - ./k8s-gateway.yaml
-  - ./kyverno.yaml
   - ./jetstack.yaml
+  - ./kyverno.yaml
   - ./metrics-server.yaml
-  - ./openebs.yaml
-  - ./stakater.yaml
+  - ./node-feature-discovery.yaml
   - ./nvidia-operator.yaml
   - ./nvidia.yaml
+  - ./openebs.yaml
+  - ./piraeus.yaml
   - ./prometheus-community.yaml
+  # - ./rook-ceph.yaml
+  - ./spegel.yaml
+  - ./stakater.yaml
+  # - ./stevehipwell.yaml
+  - ./wiremind.yaml
