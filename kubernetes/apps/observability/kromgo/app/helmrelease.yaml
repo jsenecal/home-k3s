@@ -77,7 +77,7 @@ spec:
             port: *healthPort
     ingress:
       app:
-        className: nginx-external
+        className: external
         hosts:
           - host: "{{ .Release.Name }}.mstrsmth.io"
             paths:
