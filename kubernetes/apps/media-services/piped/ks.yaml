@@ -6,7 +6,7 @@ metadata:
   name: &appname piped
   namespace: flux-system
 spec:
-  targetNamespace: media
+  targetNamespace: media-services
   commonMetadata:
     labels:
       app.kubernetes.io/name: *appname
