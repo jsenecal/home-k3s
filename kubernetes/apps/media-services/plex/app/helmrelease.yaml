@@ -87,7 +87,7 @@ spec:
           nginx.ingress.kubernetes.io/backend-protocol: HTTPS
         className: "external-nginx"
         hosts:
-          - host: plex.mstrsmth.io
+          - host: "plex.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
