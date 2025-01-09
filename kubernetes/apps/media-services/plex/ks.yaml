@@ -19,8 +19,8 @@ spec:
     name: home-kubernetes
   wait: true
   dependsOn:
-    #- name: openebs
-    - name: volsync
+    - name: openebs
+    # - name: volsync
     - name: external-secrets-stores
   postBuild:
     substitute:
