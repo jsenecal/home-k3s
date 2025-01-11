@@ -60,10 +60,12 @@ spec:
       service:
         selector:
           k8s-app: kube-scheduler
+      enabled: false
     kubeControllerManager: &kubeControllerManager
       service:
         selector:
           k8s-app: kube-controller-manager
+      enabled: false
     kubeEtcd:
       <<: *kubeControllerManager # etcd runs on control plane nodes
     kubeProxy:
