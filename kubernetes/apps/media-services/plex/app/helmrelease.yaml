@@ -47,7 +47,7 @@ spec:
                 spec:
                   httpGet:
                     path: /identity
-                    port: 32400
+                    port: &port 32400
                   initialDelaySeconds: 0
                   periodSeconds: 10
                   timeoutSeconds: 1
@@ -79,7 +79,7 @@ spec:
           lbipam.cilium.io/ips: 192.168.168.101
         ports:
           http:
-            port: 32400
+            port: *port
 
     ingress:
       app:

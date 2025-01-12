@@ -25,6 +25,7 @@ spec:
   postBuild:
     substitute:
       APP: *appname
+      GATUS_STATUS: "401"
       # VOLSYNC_CLAIM: plex-config
       # VOLSYNC_CAPACITY: 50Gi
 # ---
