@@ -9,7 +9,7 @@ data:
   config.yaml: |
     endpoints:
       - name: "${APP}"
-        group: external
+        group: Public services
         url: "https://${GATUS_SUBDOMAIN:-${APP}}.mstrsmth.io${GATUS_PATH:-/}"
         interval: 1m
         client:
