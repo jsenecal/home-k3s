@@ -38,18 +38,23 @@ spec:
     openebs-crds:
       csi:
         volumeSnapshots:
-          enabled: false
-          keep: false
+          enabled: true
+          keep: true
     zfs-localpv:
       enabled: false
     lvm-localpv:
-      enabled: false
+      image:
+          registry: quay.io/
+      helperPod:
+        image:
+          registry: quay.io/
+
     mayastor:
       enabled: false
     engines:
       local:
         lvm:
-          enabled: false
+          enabled: true
         zfs:
           enabled: false
       replicated:
