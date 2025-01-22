@@ -34,7 +34,7 @@ spec:
           app:
             image:
               repository: 1337kavin/piped
-              tag: latest@sha256:dd5a79a00b7db0672844709f6c5f67b938ad6b62673e07c24072324a0326966b
+              tag: latest@sha256:4640c0a7c2ec920a7e1c42db94cab41c1da08ae04e307620c5d9a619b0e3bffc
             probes:
               liveness:
                 enabled: true
