@@ -10,4 +10,5 @@ resources:
   #- ./maintainerr/ks.yaml
   #- ./piped/ks.yaml
   - ./plex/ks.yaml
+  - ./sonarr/ks.yaml
   #- ./tautulli/ks.yaml

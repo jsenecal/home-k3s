@@ -82,9 +82,9 @@ spec:
 
     ingress:
       app:
-        className: "internal-nginx"
+        className: "internal"
         hosts:
-          - host: sonarr.bjw-s.dev
+          - host: "sonarr-new.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
@@ -98,9 +98,17 @@ spec:
         type: emptyDir
       tmp:
         type: emptyDir
-      media:
+      nfs-nas-media:
         type: nfs
-        server: gladius.bjw-s.internal
-        path: /mnt/tank/Media
+        server: 192.168.254.4
+        path: /mnt/zpool/shares/media
         globalMounts:
-          - path: /data/nas-media
+          - path: /data/media
+            readOnly: false
+      nfs-nas-downloads:
+        type: nfs
+        server: 192.168.254.4
+        path: /mnt/zpool/shares/downloads
+        globalMounts:
+          - path: /data/downloads
+            readOnly: false
