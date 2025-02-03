@@ -30,7 +30,7 @@ spec:
             fsGroup: 2000
             fsGroupChangePolicy: "OnRootMismatch"
             supplementalGroups:
-              - 65542 # gladius:external-services
+              - 65542
 
         containers:
           app:
@@ -43,13 +43,13 @@ spec:
               RADARR__PORT: &port 7878
               RADARR__AUTHENTICATION_METHOD: External
               RADARR__AUTHENTICATION_REQUIRED: DisabledForLocalAddresses
-              RADARR__APPLICATION_URL: "https://radarr.bjw-s.dev"
+              RADARR__APPLICATION_URL: "https://radarr.mstrsmth.io"
               RADARR__LOG_LEVEL: info
               RADARR__API_KEY:
                 valueFrom:
                   secretKeyRef:
                     name: radarr-secret
-                    key: api_key
+                    key: api-key
             probes:
               liveness:
                 enabled: true
@@ -82,9 +82,9 @@ spec:
 
     ingress:
       app:
-        className: "internal-nginx"
+        className: "internal"
         hosts:
-          - host: radarr.bjw-s.dev
+          - host: radarr.mstrsmth.io
             paths:
               - path: /
                 service:
@@ -98,9 +98,17 @@ spec:
         type: emptyDir
       tmp:
         type: emptyDir
-      media:
+      nfs-nas-media:
         type: nfs
-        server: gladius.bjw-s.internal
-        path: /mnt/tank/Media
+        server: 192.168.254.4
+        path: /mnt/zpool/shares/media
         globalMounts:
-          - path: /data/nas-media
+          - path: /data/media
+            readOnly: false
+      nfs-nas-downloads:
+        type: nfs
+        server: 192.168.254.4
+        path: /mnt/zpool/shares/downloads
+        globalMounts:
+          - path: /data/downloads
+            readOnly: false
