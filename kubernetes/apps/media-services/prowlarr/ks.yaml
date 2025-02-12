@@ -6,13 +6,13 @@ metadata:
   name: &appname prowlarr
   namespace: flux-system
 spec:
-  targetNamespace: downloads
+  targetNamespace: media-services
   commonMetadata:
     labels:
       app.kubernetes.io/name: *appname
   interval: 30m
   timeout: 5m
-  path: "./kubernetes/apps/downloads/prowlarr/app"
+  path: "./kubernetes/apps/media-services/prowlarr/app"
   prune: true
   sourceRef:
     kind: GitRepository
@@ -20,11 +20,11 @@ spec:
   wait: false
   dependsOn:
     - name: openebs
-    - name: volsync
+    # - name: volsync
     - name: external-secrets-stores
   postBuild:
     substitute:
       APP: *appname
       APP_UID: "2000"
       APP_GID: "2000"
-      VOLSYNC_CLAIM: prowlarr-config
+      # VOLSYNC_CLAIM: prowlarr-config
