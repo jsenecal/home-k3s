@@ -84,7 +84,7 @@ spec:
       app:
         className: "internal"
         hosts:
-          - host: "sonarr-new.${SECRET_DOMAIN}"
+          - host: "sonarr.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
