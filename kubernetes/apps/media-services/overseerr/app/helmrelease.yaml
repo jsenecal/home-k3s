@@ -10,6 +10,7 @@ spec:
     spec:
       chart: app-template
       version: 3.7.1
+      interval: 30m
       sourceRef:
         kind: HelmRepository
         name: bjw-s
@@ -27,6 +28,7 @@ spec:
       overseerr:
         annotations:
           reloader.stakater.com/auto: "true"
+
         containers:
           app:
             image:
@@ -75,7 +77,6 @@ spec:
     ingress:
       app:
         annotations:
-          nginx.ingress.kubernetes.io/backend-protocol: HTTPS
           external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
         className: external
         hosts:
