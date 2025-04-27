@@ -92,8 +92,9 @@ spec:
       config:
         existingClaim: prowlarr-config
       tmp:
-        enabled: true
         type: emptyDir
         medium: Memory
-        subPath:
-        mountPath: /tmp
+        advancedMounts:
+          prowlarr:
+            app:
+              - path: /tmp
