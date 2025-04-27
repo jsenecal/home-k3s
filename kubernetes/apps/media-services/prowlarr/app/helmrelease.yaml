@@ -35,9 +35,6 @@ spec:
             image:
               repository: ghcr.io/onedr0p/prowlarr-develop
               tag: 1.31.1.4959@sha256:92490cca2f373286a3b4423aebf43e5628ee75dcd55cb325dbe6e1c846cce835
-            volumeMounts:
-              - name: tmp
-                mountPath: /tmp
             env:
               COMPlus_EnableDiagnostics: "0"
               PROWLARR__INSTANCE_NAME: Prowlarr
@@ -95,5 +92,8 @@ spec:
       config:
         existingClaim: prowlarr-config
       tmp:
+        enabled: true
         type: emptyDir
         medium: Memory
+        subPath:
+        mountPath: /tmp
