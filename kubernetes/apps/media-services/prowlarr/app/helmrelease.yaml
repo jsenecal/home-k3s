@@ -91,3 +91,7 @@ spec:
     persistence:
       config:
         existingClaim: prowlarr-config
+      tmp:
+        type: emptyDir
+        medium: Memory
+        mountPath: /tmp
